@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Online Calculator";
+}
+
+@section Scripts {
+    <script src="~/js/index.js" asp-append-version="true"></script>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Online Calculator</h1>
+    <br />
+</div>
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col">
+            <input id="first-operand" type="number" class="form-control" placeholder="First operand">
+        </div>
+        <div class="col">
+            <input id="second-operand" type="number" class="form-control" placeholder="Second operand">
+        </div>
+    </div>
+
+    <br />
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-outline-secondary">
+            <input checked type="radio" name="operationType" value="Add" autocomplete="off">Add
+        </label>
+        <label class="btn btn-outline-secondary">
+            <input type="radio" name="operationType" value="Subtract" autocomplete="off">Subtract
+        </label>
+        <label class="btn btn-outline-secondary">
+            <input type="radio" name="operationType" value="Multiply" autocomplete="off">Multiply
+        </label>
+        <label class="btn btn-outline-secondary">
+            <input type="radio" name="operationType" value="Divide" autocomplete="off">Divide
+        </label>
+    </div>
+    <div class="row mt-3">
+        <div class="col-6">
+            <input type="button" id="sendButton" value="Calculate" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <p class="mx-3">Answer:</p><br />
+        <p id="answer"></p>
+    </div>
+</div>
